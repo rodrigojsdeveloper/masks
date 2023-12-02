@@ -51,3 +51,15 @@ const formattedPhone = maskPhone("11999125003");
 
 console.log(formattedPhone); // (11) 99912-5003
 ```
+
+### Máscara de RG
+
+```
+const maskRG = (value) => {
+  return value.replace(/(\d\d)(\d{3})(\d{3})(\d)/g, "\$1.\$2.\$3-\$4");
+};
+
+const formattedRG = maskRG("106446733");
+
+console.log(formattedRG); // 10.644.673-3
+```
