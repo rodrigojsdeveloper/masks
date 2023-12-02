@@ -27,3 +27,15 @@ const formattedCNPJ = maskCNPJ("22447544000139");
 
 console.log(formattedCNPJ); // 22.447.544/0001-39
 ```
+
+### Máscara de CEP
+
+```
+const maskZipCode = (value) => {
+  return value.replace(/(\d{5})(\d{3})/g, "\$1-\$2");
+};
+
+const formattedZipCode = maskZipCode("15400971");
+
+console.log(formattedZipCode); // 15400-971
+```
