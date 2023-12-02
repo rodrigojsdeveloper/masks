@@ -39,3 +39,15 @@ const formattedZipCode = maskZipCode("15400971");
 
 console.log(formattedZipCode); // 15400-971
 ```
+
+### Máscara de Telefone
+
+```
+const maskPhone = (value) => {
+  return value.replace(/(\d\d)(\d{5})(\d{4})/g, "(\$1) \$2-\$3");
+};
+
+const formattedPhone = maskPhone("11999125003");
+
+console.log(formattedPhone); // (11) 99912-5003
+```
