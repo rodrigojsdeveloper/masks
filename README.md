@@ -63,3 +63,15 @@ const formattedRG = maskRG("106446733");
 
 console.log(formattedRG); // 10.644.673-3
 ```
+
+### Máscara de Número de Cartão de Crédito
+
+```
+const maskCardNumber = (value) => {
+  return value.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/g, "\$1 \$2 \$3 \$4");
+};
+
+const formattedCardNumber = maskCardNumber("5453222710806374");
+
+console.log(formattedCardNumber); // 5453 2227 1080 6374
+```
