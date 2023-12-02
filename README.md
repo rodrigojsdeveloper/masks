@@ -99,3 +99,15 @@ const formattedPIS = maskPIS("66490416767");
 
 console.log(formattedPIS); // 664.90416.76-7
 ```
+
+### Máscara para Placas de Veículos
+
+```
+const maskVehiclePlate = (value) => {
+  return value.replace(/(.{3})(\d{4})/g, "\$1-\$2");
+};
+
+const formattedVehiclePlate = maskVehiclePlate("HQM0735");
+
+console.log(formattedVehiclePlate); // HQM-0735
+```
