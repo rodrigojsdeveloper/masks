@@ -76,16 +76,6 @@ const formattedCreditCardNumber = maskCreditCardNumber("5453222710806374");
 console.log(formattedCreditCardNumber); // 5453 2227 1080 6374
 ```
 
-```
-const maskCardNumber = (value) => {
-  return value.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/g, "\$1 \$2 \$3 \$4");
-};
-
-const formattedCardNumber = maskCardNumber("5453222710806374");
-
-console.log(formattedCardNumber); // 5453 2227 1080 6374
-```
-
 ### Máscara para Data de Validade de Cartão de Crédito
 
 ```
@@ -96,4 +86,16 @@ const maskCreditCardExpirationDate = (value) => {
 const formattedCreditCardExpirationDate = maskCreditCardExpirationDate("1231");
 
 console.log(formattedCreditCardExpirationDate); // 12/31
+```
+
+### Máscara para PIS
+
+```
+const maskPIS = (value) => {
+  return value.replace(/(\d{3})(\d{5})(\d\d)(\d)/g, "\$1.\$2.\$3-\$4");
+};
+
+const formattedPIS = maskPIS("66490416767");
+
+console.log(formattedPIS); // 664.90416.76-7
 ```
