@@ -1,7 +1,7 @@
 <div align="center">
-  <h1>Máscara</h1>
+  <h1>Máscaras</h1>
 
-  <p>Máscaras ou expressões regulares (regex) são uma forma de formatar ou validar a entrada do usuário de acordo com um padrão predefinido.</p>
+  <p>As máscaras ou expressões regulares (regex) são uma forma de formatar ou validar a entrada do usuário de acordo com um padrão predefinido.</p>
 </div>
 
 ### Máscara para CPF
@@ -104,7 +104,7 @@ console.log(formattedPIS); // 664.90416.76-7
 
 ```
 const maskVehiclePlate = (value) => {
-  return value.replace(/(.{3})(\d{4})/g, "\$1-\$2");
+  return value.replace(/([A-Z]{3})(\d{4})/g, "\$1-\$2");
 };
 
 const formattedVehiclePlate = maskVehiclePlate("HQM0735");
@@ -123,3 +123,7 @@ const formattedCertificates = maskCertificates("18022701552014186367128716557687
 
 console.log(formattedCertificates); // 180227 01 55 2014 1 86367 128 7165576-87
 ```
+
+<br/>
+<p align="center">Desenvolvido por <a href="https://www.linkedin.com/in/rodrigo-de-jesus-silva/">Rodrigo Silva</a>
+</p>
