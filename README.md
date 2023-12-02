@@ -4,7 +4,7 @@
   <p>Máscaras ou expressões regulares (regex) são uma forma de formatar ou validar a entrada do usuário de acordo com um padrão predefinido.</p>
 </div>
 
-### Máscara de CPF
+### Máscara para CPF
 
 ```
 const maskCPF = (value) => {
@@ -16,7 +16,7 @@ const formattedCPF = maskCPF("00892585099");
 console.log(formattedCPF); // 008.925.850-99
 ```
 
-### Máscara de CNPJ
+### Máscara para CNPJ
 
 ```
 const maskCNPJ = (value) => {
@@ -28,7 +28,7 @@ const formattedCNPJ = maskCNPJ("22447544000139");
 console.log(formattedCNPJ); // 22.447.544/0001-39
 ```
 
-### Máscara de CEP
+### Máscara para CEP
 
 ```
 const maskZipCode = (value) => {
@@ -40,7 +40,7 @@ const formattedZipCode = maskZipCode("15400971");
 console.log(formattedZipCode); // 15400-971
 ```
 
-### Máscara de Telefone
+### Máscara para Telefone
 
 ```
 const maskPhone = (value) => {
@@ -52,7 +52,7 @@ const formattedPhone = maskPhone("11999125003");
 console.log(formattedPhone); // (11) 99912-5003
 ```
 
-### Máscara de RG
+### Máscara para RG
 
 ```
 const maskRG = (value) => {
@@ -64,7 +64,17 @@ const formattedRG = maskRG("106446733");
 console.log(formattedRG); // 10.644.673-3
 ```
 
-### Máscara de Número de Cartão de Crédito
+### Máscara para Número de Cartão de Crédito
+
+```
+const maskCreditCardNumber = (value) => {
+  return value.replace(/(\d{4})(\d{4})(\d{4})(\d{4})/g, "\$1 \$2 \$3 \$4");
+};
+
+const formattedCreditCardNumber = maskCreditCardNumber("5453222710806374");
+
+console.log(formattedCreditCardNumber); // 5453 2227 1080 6374
+```
 
 ```
 const maskCardNumber = (value) => {
@@ -74,4 +84,16 @@ const maskCardNumber = (value) => {
 const formattedCardNumber = maskCardNumber("5453222710806374");
 
 console.log(formattedCardNumber); // 5453 2227 1080 6374
+```
+
+### Máscara para Data de Validade de Cartão de Crédito
+
+```
+const maskCreditCardExpirationDate = (value) => {
+  return value.replace(/(\d\d)(\d\d)/g, "\$1/\$2");
+};
+
+const formattedCreditCardExpirationDate = maskCreditCardExpirationDate("1231");
+
+console.log(formattedCreditCardExpirationDate); // 12/31
 ```
