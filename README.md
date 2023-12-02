@@ -111,3 +111,15 @@ const formattedVehiclePlate = maskVehiclePlate("HQM0735");
 
 console.log(formattedVehiclePlate); // HQM-0735
 ```
+
+### Máscara para Certidões de Nascimento, Casamento e Óbito
+
+```
+const maskCertificates = (value) => {
+  return value.replace(/(\d{6})(\d\d)(\d\d)(\d{4})(\d)(\d{5})(\d{3})(\d{7})(\d\d)/g, "\$1 \$2 \$3 \$4 \$5 \$6 \$7 \$8-\$9");
+};
+
+const formattedCertificates = maskCertificates("18022701552014186367128716557687");
+
+console.log(formattedCertificates); // 180227 01 55 2014 1 86367 128 7165576-87
+```
